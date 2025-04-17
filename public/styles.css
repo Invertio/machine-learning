@@ -1,0 +1,76 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #FF6F00;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .data-collection, .controls, .prediction {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  video {
+    display: block;
+    margin: 10px 0;
+    background: #000000;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  
+  #predictionWebcam {
+    max-width: 640px;
+  }
+  
+  button {
+    padding: 10px;
+    margin: 5px 3px 5px 0;
+  }
+  
+  .class-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .class-webcam {
+    margin-bottom: 10px;
+  }
+  
+  #predictionResults {
+    font-size: 1.2em;
+    margin-top: 10px;
+    min-height: 60px;
+  }
+  
+  .removed {
+    display: none;
+  }
+  
+  #status {
+    font-size: 150%;
+  }
+  
+  .class-progress {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+  }

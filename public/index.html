@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transfer Learning - TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>  
+  <body>
+    <h1>Make your own "Teachable Machine" using Transfer Learning with MobileNet v3 in TensorFlow.js</h1>
+    
+    <p id="status">Awaiting TF.js load</p>
+    
+    <div class="container">
+      <div class="data-collection">
+        <h2>Data Collection</h2>
+        <div class="class-container" id="class1">
+          <h3>Class 1</h3>
+          <video class="class-webcam" id="webcam1" autoplay></video>
+          <button class="dataCollector" data-1hot="0" data-name="Class 1">Gather Class 1 Data</button>
+          <div class="class-progress">Data count: 0</div>
+        </div>
+        
+        <div class="class-container" id="class2">
+          <h3>Class 2</h3>
+          <video class="class-webcam" id="webcam2" autoplay></video>
+          <button class="dataCollector" data-1hot="1" data-name="Class 2">Gather Class 2 Data</button>
+          <div class="class-progress">Data count: 0</div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="enableCam">Enable All Webcams</button>
+        <button id="train">Train &amp; Predict!</button>
+        <button id="reset">Reset</button>
+        
+        <ol>
+          <li>First enable webcam and allow access when asked.</li>
+          <li>Now find an object, point cam at it, click and hold gather class data button to gather at least 30 samples.</li>
+          <li>Repeat for other class with a different object.</li>
+          <li>Click train and predict and wait while the model is trained live in your browser.</li>
+          <li>Once trained you will see live predictions appear above the prediction webcam.</li>
+        </ol>
+      </div>
+      
+      <div class="prediction">
+        <h2>Prediction</h2>
+        <video id="predictionWebcam" autoplay></video>
+        <div id="predictionResults">No predictions yet</div>
+      </div>
+    </div>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js" type="text/javascript"></script>
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
